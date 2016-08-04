@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BUKTextLengthLimitTextField_Example' do
+  pod 'BUKTextLengthLimitTextField', :path => '../'
+
+  target 'BUKTextLengthLimitTextField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
