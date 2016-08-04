@@ -40,8 +40,8 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
     UITextRange *selectedRange = [textField markedTextRange];
     UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
     if (!position) {
-        if (toBeString.length > 3) {
-            textField.text = [toBeString substringToIndex:3];
+        if (toBeString.length > self.textLengthLimit) {
+            textField.text = [toBeString substringToIndex:self.textLengthLimit];
         }
     }
 }
