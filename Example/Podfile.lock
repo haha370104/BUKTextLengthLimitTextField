@@ -1,0 +1,16 @@
+PODS:
+  - BUKTextLengthLimitTextField (0.1.0)
+
+DEPENDENCIES:
+  - BUKTextLengthLimitTextField (from `../`)
+
+EXTERNAL SOURCES:
+  BUKTextLengthLimitTextField:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BUKTextLengthLimitTextField: c1bbf7d40dc4afc695325dbb69aa5138c4855980
+
+PODFILE CHECKSUM: ba9eb8eda8c3fab6aac14821d56f4bca1ec0498e
+
+COCOAPODS: 1.0.1

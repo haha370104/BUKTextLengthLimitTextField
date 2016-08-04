@@ -7,8 +7,11 @@
 //
 
 #import "BUKViewController.h"
+#import "BUKTextLengthLimitTextField/UITextField+UITextField_TextLengthLimit.h"
 
 @interface BUKViewController ()
+
+@property (nonatomic, strong)UITextField *textField;
 
 @end
 
@@ -17,13 +20,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self.view addSubview:self.textField];
 }
 
-- (void)didReceiveMemoryWarning
+- (UITextField *)textField
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if(!_textField){
+        _textField = [[UITextField alloc]initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width - 30, 80)];
+        _textField.placeholder = @"输入";
+        NSLog(@"%ld",(long)_textField.textLengthLimit);
+        _textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        _textField.textLengthLimit = 3;
+    }
+    return _textField;
 }
 
 @end
