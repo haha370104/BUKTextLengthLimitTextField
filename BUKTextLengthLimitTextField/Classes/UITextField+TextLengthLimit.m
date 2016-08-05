@@ -52,7 +52,7 @@ static void const* bx_handleDidCutOffStringKey = &bx_handleDidCutOffStringKey;
 
 - (void)setBx_textLengthLimit:(NSInteger)bx_textLengthLimit
 {
-    if (bx_textLengthLimit > 0) {
+    if (bx_textLengthLimit != NSNotFound && bx_textLengthLimit > 0) {
         objc_setAssociatedObject(self, bx_textLengthLimitKey, @(bx_textLengthLimit), OBJC_ASSOCIATION_COPY);
         [self addTarget:self action:@selector(bx_textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
