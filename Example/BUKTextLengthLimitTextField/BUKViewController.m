@@ -30,7 +30,7 @@
         _textField.placeholder = @"输入";
         _textField.autocorrectionType = UITextAutocorrectionTypeNo;
         _textField.textLengthLimit = 5;
-        [_textField setHandleDidCutOffString:^(UITextField *textField) {
+        [_textField setDidCutOffStringHandler:^(UITextField *textField) {
             NSLog(@"123");
         }];
     }

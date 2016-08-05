@@ -29,8 +29,8 @@ static void const* handleDidCutOffStringKey = &handleDidCutOffStringKey;
                 subStringRange.length -= lastCharacterLength;
             }
             textField.text = [toBeString substringWithRange:subStringRange];
-            if(self.handleDidCutOffString){
-                self.handleDidCutOffString(self);
+            if(self.didCutOffStringHandler){
+                self.didCutOffStringHandler(self);
             }
         }
     }
@@ -50,9 +50,9 @@ static void const* handleDidCutOffStringKey = &handleDidCutOffStringKey;
     return _textLengthLimit;
 }
 
-- (void (^)(UITextField *))handleDidCutOffString
+- (void (^)(UITextField *))didCutOffStringHandler
 {
-    return (void (^)(UITextField *))objc_getAssociatedObject(self, handleDidCutOffStringKey);
+    return objc_getAssociatedObject(self, handleDidCutOffStringKey);
 }
 
 #pragma mark - setter -
@@ -66,7 +66,7 @@ static void const* handleDidCutOffStringKey = &handleDidCutOffStringKey;
     }
 }
 
-- (void)setHandleDidCutOffString:(void (^)(UITextField *))handleDidCutOffString
+- (void)setDidCutOffStringHandler:(void (^)(UITextField *))handleDidCutOffString
 {
     objc_setAssociatedObject(self, handleDidCutOffStringKey, handleDidCutOffString, OBJC_ASSOCIATION_COPY);
 }

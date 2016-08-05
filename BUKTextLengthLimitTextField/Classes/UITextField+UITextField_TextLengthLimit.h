@@ -11,6 +11,6 @@
 @interface UITextField (UITextField_TextLengthLimit)
 
 @property (nonatomic, assign) NSInteger textLengthLimit;
-@property (nonatomic, copy) void (^handleDidCutOffString)(UITextField *);
+@property (nonatomic, copy) void (^didCutOffStringHandler)(UITextField *);
 
 @end
