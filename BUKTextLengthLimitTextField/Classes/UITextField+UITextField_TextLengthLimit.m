@@ -28,6 +28,9 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
                 subStringRange.length -= lastCharacterLength;
             }
             textField.text = [toBeString substringWithRange:subStringRange];
+            if(self.handleDidCutOffString){
+                self.handleDidCutOffString(self);
+            }
         }
     }
 }
