@@ -24,7 +24,7 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
         if (toBeString.length > self.textLengthLimit) {
             NSInteger lastCharacterLength = [toBeString rangeOfComposedCharacterSequenceAtIndex:5].length;
             NSRange subStringRange = [toBeString rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, self.textLengthLimit)];
-            if(lastCharacterLength > 1 && subStringRange.length > self.textLengthLimit){
+            if(subStringRange.length > self.textLengthLimit){
                 subStringRange.length -= lastCharacterLength;
             }
             textField.text = [toBeString substringWithRange:subStringRange];
