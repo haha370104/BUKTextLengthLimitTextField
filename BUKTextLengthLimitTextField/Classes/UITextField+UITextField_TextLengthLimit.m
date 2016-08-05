@@ -23,7 +23,7 @@ static void const* handleDidCutOffStringKey = &handleDidCutOffStringKey;
     UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
     if (!position) {
         if (toBeString.length > self.textLengthLimit) {
-            NSInteger lastCharacterLength = [toBeString rangeOfComposedCharacterSequenceAtIndex:5].length;
+            NSInteger lastCharacterLength = [toBeString rangeOfComposedCharacterSequenceAtIndex:self.textLengthLimit].length;
             NSRange subStringRange = [toBeString rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, self.textLengthLimit)];
             if(subStringRange.length > self.textLengthLimit){
                 subStringRange.length -= lastCharacterLength;
