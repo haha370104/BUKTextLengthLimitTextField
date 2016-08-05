@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 
 static void const* textLengthLimitKey = &textLengthLimitKey;
+static void const* handleDidCutOffStringKey = &handleDidCutOffStringKey;
 
 @implementation UITextField (UITextField_TextLengthLimit)
 
@@ -49,6 +50,11 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
     return _textLengthLimit;
 }
 
+- (void (^)(UITextField *))handleDidCutOffString
+{
+    return (void (^)(UITextField *))objc_getAssociatedObject(self, handleDidCutOffStringKey);
+}
+
 #pragma mark - setter -
 
 - (void)setTextLengthLimit:(NSInteger)textLengthLimit
@@ -58,6 +64,11 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
         objc_setAssociatedObject(self, textLengthLimitKey, @(textLengthLimit), OBJC_ASSOCIATION_COPY);
         [self addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
+}
+
+- (void)setHandleDidCutOffString:(void (^)(UITextField *))handleDidCutOffString
+{
+    objc_setAssociatedObject(self, handleDidCutOffStringKey, handleDidCutOffString, OBJC_ASSOCIATION_COPY);
 }
 
 @end
