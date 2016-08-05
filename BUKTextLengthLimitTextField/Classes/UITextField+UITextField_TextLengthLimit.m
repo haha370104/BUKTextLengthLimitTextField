@@ -13,26 +13,7 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
 
 @implementation UITextField (UITextField_TextLengthLimit)
 
-
-#pragma mark - getter && setter -
-
-- (NSInteger)textLengthLimit
-{
-    NSInteger *_textLengthLimit = [(NSNumber *)objc_getAssociatedObject(self, textLengthLimitKey) integerValue];
-    if(!_textLengthLimit){
-        _textLengthLimit = -1;
-    }
-    return _textLengthLimit;
-}
-
-- (void)setTextLengthLimit:(NSInteger)textLengthLimit
-{
-    objc_setAssociatedObject(self, textLengthLimitKey, @(textLengthLimit), OBJC_ASSOCIATION_COPY);
-    if(textLengthLimit > 0)
-    {
-        [self addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    }
-}
+#pragma mark - event -
 
 - (void)textFieldDidChange:(UITextField *)textField
 {
@@ -41,8 +22,38 @@ static void const* textLengthLimitKey = &textLengthLimitKey;
     UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
     if (!position) {
         if (toBeString.length > self.textLengthLimit) {
-            textField.text = [toBeString substringToIndex:self.textLengthLimit];
+            NSInteger lastCharacterLength = [toBeString rangeOfComposedCharacterSequenceAtIndex:5].length;
+            NSRange subStringRange = [toBeString rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, self.textLengthLimit)];
+            if(lastCharacterLength > 1 && subStringRange.length > self.textLengthLimit){
+                subStringRange.length -= lastCharacterLength;
+            }
+            textField.text = [toBeString substringWithRange:subStringRange];
         }
+    }
+}
+
+#pragma mark - getter && setter -
+
+#pragma mark - getter -
+
+- (NSInteger)textLengthLimit
+{
+    NSNumber *textLengthLimitNumber = (NSNumber *)objc_getAssociatedObject(self, textLengthLimitKey);
+    NSInteger _textLengthLimit = -1;
+    if(textLengthLimitNumber){
+        _textLengthLimit = [textLengthLimitNumber integerValue];
+    }
+    return _textLengthLimit;
+}
+
+#pragma mark - setter -
+
+- (void)setTextLengthLimit:(NSInteger)textLengthLimit
+{
+    if(textLengthLimit > 0)
+    {
+        objc_setAssociatedObject(self, textLengthLimitKey, @(textLengthLimit), OBJC_ASSOCIATION_COPY);
+        [self addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
 }
 
