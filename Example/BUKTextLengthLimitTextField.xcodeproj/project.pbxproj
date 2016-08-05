@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32AF64CCD2BA74A7C7F5E6BF /* Pods_BUKTextLengthLimitTextField_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54D5D6CCE06A9C6CB53C5CF /* Pods_BUKTextLengthLimitTextField_Example.framework */; };
-		3B7493181996EC78C065B057 /* Pods_BUKTextLengthLimitTextField_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7CFCB6BDDFFB47721643DC /* Pods_BUKTextLengthLimitTextField_Tests.framework */; };
+		3759B59C107F26BBB4184026 /* libPods-BUKTextLengthLimitTextField_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B39215A33936223224D9E33 /* libPods-BUKTextLengthLimitTextField_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		DB1CEFC7A9F02A4F03EFAFAD /* libPods-BUKTextLengthLimitTextField_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42516DBD282BF600F65EDC14 /* libPods-BUKTextLengthLimitTextField_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,8 @@
 		0E2F2B0B6F423577E2E07108 /* BUKTextLengthLimitTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BUKTextLengthLimitTextField.podspec; path = ../BUKTextLengthLimitTextField.podspec; sourceTree = "<group>"; };
 		2A7505EF3EB27046316DBD4F /* Pods-BUKTextLengthLimitTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKTextLengthLimitTextField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKTextLengthLimitTextField_Example/Pods-BUKTextLengthLimitTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3AAD371EACF4163580444AEB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		42516DBD282BF600F65EDC14 /* libPods-BUKTextLengthLimitTextField_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BUKTextLengthLimitTextField_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B39215A33936223224D9E33 /* libPods-BUKTextLengthLimitTextField_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BUKTextLengthLimitTextField_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		529B52A39CDC6CF0746CFE85 /* Pods-BUKTextLengthLimitTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKTextLengthLimitTextField_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKTextLengthLimitTextField_Tests/Pods-BUKTextLengthLimitTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BUKTextLengthLimitTextField_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUKTextLengthLimitTextField_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +65,6 @@
 		770EFF7117A912182E03BBB9 /* Pods-BUKTextLengthLimitTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKTextLengthLimitTextField_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BUKTextLengthLimitTextField_Example/Pods-BUKTextLengthLimitTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA4E7457EAC195F38ABAC6CD /* Pods-BUKTextLengthLimitTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKTextLengthLimitTextField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BUKTextLengthLimitTextField_Tests/Pods-BUKTextLengthLimitTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E54D5D6CCE06A9C6CB53C5CF /* Pods_BUKTextLengthLimitTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKTextLengthLimitTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF7CFCB6BDDFFB47721643DC /* Pods_BUKTextLengthLimitTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKTextLengthLimitTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				32AF64CCD2BA74A7C7F5E6BF /* Pods_BUKTextLengthLimitTextField_Example.framework in Frameworks */,
+				DB1CEFC7A9F02A4F03EFAFAD /* libPods-BUKTextLengthLimitTextField_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				3B7493181996EC78C065B057 /* Pods_BUKTextLengthLimitTextField_Tests.framework in Frameworks */,
+				3759B59C107F26BBB4184026 /* libPods-BUKTextLengthLimitTextField_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +132,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				E54D5D6CCE06A9C6CB53C5CF /* Pods_BUKTextLengthLimitTextField_Example.framework */,
-				EF7CFCB6BDDFFB47721643DC /* Pods_BUKTextLengthLimitTextField_Tests.framework */,
+				42516DBD282BF600F65EDC14 /* libPods-BUKTextLengthLimitTextField_Example.a */,
+				4B39215A33936223224D9E33 /* libPods-BUKTextLengthLimitTextField_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = haha370104;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = L5B4TBT7H9;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -513,13 +516,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BUKTextLengthLimitTextField/BUKTextLengthLimitTextField-Prefix.pch";
 				INFOPLIST_FILE = "BUKTextLengthLimitTextField/BUKTextLengthLimitTextField-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -530,13 +536,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BUKTextLengthLimitTextField/BUKTextLengthLimitTextField-Prefix.pch";
 				INFOPLIST_FILE = "BUKTextLengthLimitTextField/BUKTextLengthLimitTextField-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

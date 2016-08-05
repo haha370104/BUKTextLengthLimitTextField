@@ -1,6 +1,0 @@
-framework module BUKTextLengthLimitTextField {
-  umbrella header "BUKTextLengthLimitTextField-umbrella.h"
-
-  export *
-  module * { export * }
-}
