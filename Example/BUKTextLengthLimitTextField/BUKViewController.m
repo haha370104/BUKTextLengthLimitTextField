@@ -29,7 +29,7 @@
         _textField = [[UITextField alloc]initWithFrame:CGRectMake(30, 30, self.view.bounds.size.width - 30, 80)];
         _textField.placeholder = @"输入";
         _textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        _textField.bx_textLengthLimit = 5;
+        _textField.bx_textLengthLimit = NSNotFound;
         [_textField setBx_didCutOffStringHandler:^(UITextField *textField) {
             NSLog(@"123");
         }];
