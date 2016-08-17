@@ -13,4 +13,6 @@
 @property (nonatomic, assign) NSInteger bx_textLengthLimit;
 @property (nonatomic, copy) void (^bx_didCutOffStringHandler)(UITextField *);
 
+- (void)bx_textFieldDidChange;
+
 @end

@@ -37,6 +37,13 @@ static void const* bx_handleDidCutOffStringKey = &bx_handleDidCutOffStringKey;
     }
 }
 
+#pragma mark - public -
+
+- (void)bx_textFieldDidChange
+{
+    [self bx_textFieldDidChange:self];
+}
+
 #pragma mark - getter && setter
 
 - (NSInteger)bx_textLengthLimit
